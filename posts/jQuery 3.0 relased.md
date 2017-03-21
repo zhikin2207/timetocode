@@ -1,0 +1,1 @@
+Do not miss new jQuery 3.0 release. No old IE workarounds, slim builds, jQuery.Deferred is now compatible with Promises/A+ and much more. See [official release notes](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/).
