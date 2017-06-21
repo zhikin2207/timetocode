@@ -23,45 +23,8 @@ Even now we can see the result. But to make it more clear, let's add some rules 
 
 Obviously, the length of the longest common substring is the maximum value in this table. And the actual substring can be reproduced by previous cells from the cell with maximum value to the cell with a value of one.
 
-**Source code**
-```javascript
-function longestCommonSubstring(x, y) {
-    if (x.length === 0 || y.length === 0) return '';
-
-    var i, j, maxLength = 0, lcsIndex = 0, result = '';
-
-    // table initialization
-    var dp = new Array(x.length + 1);
-    for (i = 0; i <= x.length; i++) {
-        dp[i] = new Array(y.length + 1);
-    }
-
-    for (i = 0; i <= x.length; i++) {
-        for (j = 0; j <= y.length; j++) {
-            // substring of nothing has length of zero
-            if (i === 0 || j === 0) {
-                dp[i][j] = 0;
-            } else if (x[i - 1] !== y[j - 1]) {
-                dp[i][j] = 0;
-            } else {
-                dp[i][j] = dp[i - 1][j - 1] + 1;
-
-                if (dp[i][j] > maxLength) {
-                    maxLength = dp[i][j];
-                    lcsIndex = i;
-                }
-            }
-        }
-    }
-
-    // reproduce the answer
-    for (i = lcsIndex - 1; i >= 0 && maxLength >= 1; i--,maxLength--) {
-        result = x[i] + result;
-    }
-
-    return result;
-}
-```
+The source code for this problem you may find [here][source-code]. Thank you for reading my blog and have a nice coding!
 
 [longest-common-substring-1]: https://timetocode.files.wordpress.com/2017/06/longest-common-substring-1.png
 [longest-common-substring-2]: https://timetocode.files.wordpress.com/2017/06/longest-common-substring-21.png
+[source-code]: https://github.com/zhikin2207/timetocode/blob/master/source-code/longest-common-substring.js?ts=4
