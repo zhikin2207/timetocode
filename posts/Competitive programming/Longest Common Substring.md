@@ -23,8 +23,8 @@ Even now we can see the result. But to make it more clear, let's add some rules 
 
 Obviously, the length of the longest common substring is the maximum value in this table. And the actual substring can be reproduced by previous cells from the cell with maximum value to the cell with a value of one.
 
-**Solution time-complexity**: <span style="color:#d34c62;"><code>O(N^2)</code></span>
-**Solution space-complexity**: <span style="color:#d34c62;"><code>O(|X| * |Y|)</code></span>
+**Time complexity**: <span style="color:#d34c62;"><code>O(N^2)</code></span>
+**Space complexity**: <span style="color:#d34c62;"><code>O(|X| * |Y|)</code></span>
 
 The source code for this problem you may find [here][source-code]. Thank you for reading my blog and have a nice coding!
 
